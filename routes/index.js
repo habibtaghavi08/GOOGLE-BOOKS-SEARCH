@@ -6,5 +6,23 @@ function routes(app){
             res.json(result.data)
         })
     })
+    app.post("/api/books", function (req, res){
+        db.Book.create(req.body).then(function(results){
+            res.json(results.data)
+        })
+    })
+    app.delete("/api/books/:id", function(req, res){
+        db.Book.remove({
+            _id: req.params.id
+        })
+        .then(function(results){
+            res.json(results.data)
+        })
+    })
+    app.get("/api/books", function (req, res){
+        db.Book.find().then(function (results){
+            res.json(results)
+        })
+    })
 }
 module.exports = routes
