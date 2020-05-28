@@ -1,0 +1,12 @@
+.navbar {
+  border-radius: 0;
+ background-color:black !important;
+}
+
+.navbar-brand {
+  color: white !important;
+}
+
+.nav-link {
+  color: white !important;
+}
