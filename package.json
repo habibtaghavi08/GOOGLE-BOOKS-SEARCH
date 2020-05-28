@@ -27,5 +27,8 @@
   "bugs": {
     "url": "https://github.com/habibtaghavi08/GOOGLE-BOOKS-SEARCH/issues"
   },
-  "homepage": "https://github.com/habibtaghavi08/GOOGLE-BOOKS-SEARCH#readme"
+  "homepage": "https://github.com/habibtaghavi08/GOOGLE-BOOKS-SEARCH#readme",
+  "dependencies": {
+    "mongoose": "^5.9.16"
+  }
 }
