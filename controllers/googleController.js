@@ -1,5 +1,5 @@
 const axios = require("axios");
-const db = require("../models")
+const db = require("../models");
 
 module.exports = {
   findAll: function(req, res) {
@@ -8,10 +8,10 @@ module.exports = {
     axios
       .get("https://www.googleapis.com/books/v1/volumes", {params})
       .then(results =>{
+        console.log(results)
 
-      
-        //console.log(results)
-        const toSend = results.data.items.filter(
+        const toSend = 
+        results.data.items.filter(
           result =>
             result.volumeInfo.title &&
             result.volumeInfo.infoLink &&
@@ -20,9 +20,10 @@ module.exports = {
             result.volumeInfo.imageLinks &&
             result.volumeInfo.imageLinks.thumbnail
         )
-        console.log(toSend)
+
         res.send(toSend)
       }
+        
       )
       // .then(apiBooks =>
       //   db.Book.find().then(dbBooks =>
@@ -31,7 +32,7 @@ module.exports = {
       //     )
       //   )
       // )
-      //.then(books => res.json(books))
+      // .then(books => res.json(books))
       .catch(err => res.status(422).json(err));
   }
 };

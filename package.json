@@ -29,6 +29,8 @@
   },
   "homepage": "https://github.com/habibtaghavi08/GOOGLE-BOOKS-SEARCH#readme",
   "dependencies": {
-    "mongoose": "^5.9.16"
+    "axios": "^0.19.2",
+    "mongoose": "^5.9.16",
+    "react-router-dom": "^5.2.0"
   }
 }
