@@ -5,7 +5,7 @@ import "./style.css";
 
 function Book({ title, subtitle, authors, link, description, image, Button }) {
   return (
-    <ListItem>
+    <ListItem className= "background" className="bg-1">
       <Row className="flex-wrap-reverse">
         <Col size="md-8">
           <h3 className="font-italic">{title}</h3>

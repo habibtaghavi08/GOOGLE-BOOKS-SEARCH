@@ -1,5 +1,10 @@
+.bg-1{
+  background-color: cyan;
+}
+
 .btn-container {
-    float: right;
+    float: right; 
+    color: yellow;
     
   }
   

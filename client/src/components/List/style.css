@@ -1,5 +1,11 @@
+.list-group-item{
+  background-color:skyblue;
+  color: yellow ;
+  font-size: xx-large;
+  
+}
 .list-group-item p {
-    font-size: 16px;
+    font-size: 26px;
     
   }
   
