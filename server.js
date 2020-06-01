@@ -1,6 +1,6 @@
 const express = require("express");
 const mongoose = require("mongoose");
-const routes = require("./routes").default;
+const routes = require("./routes");
 const app = express();
 const PORT = process.env.PORT || 3005;
 
@@ -15,16 +15,10 @@ if (process.env.NODE_ENV === "production") {
 
 app.use(routes);
 
-mongoose.connect(process.env.MONGODB_URI || ("mongodb://localhost/GoogleBooksDb"),
+mongoose.connect(process.env.MONGODB_URI || ("mongodb://localhost/GoogleBooksDb"))
 
 
-// mongoose.connect(
-//   process.env.MONGODB_URI || mongoose.connect("mongodb://localhost:27017/myapp"),
-//    {useNewUrlParser: true});  
-  // {
-  //   useCreateIndex: true,
-  //   useNewUrlParser; true
-  // }
+
 
 
 app.listen(PORT, () =>
