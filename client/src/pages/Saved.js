@@ -37,9 +37,9 @@ class Saved extends Component {
           <Col size="md-12">
             <Jumbotron>
               <h1 className="text-center">
-                <strong>HABIB's GOOGLE BOOKS SEARCH</strong>
+                <strong>HABIB's BOOK SEARCH by GOOGLE</strong>
               </h1>
-              <h2 className="text-center">PLEASE SEARCH FOR THE BOOKS AND SAVE THE ONES YOU LIKE</h2>
+              <h2 className="text-center">SEARCH FOR FAVORITE BOOKS</h2>
             </Jumbotron>
           </Col>
         </Row>
@@ -74,7 +74,7 @@ class Saved extends Component {
             </Card>
           </Col>
         </Row>
-        <Footer />
+        <Footer/>
       </Container>
     );
   }

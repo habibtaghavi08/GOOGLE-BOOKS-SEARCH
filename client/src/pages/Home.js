@@ -8,6 +8,7 @@ import API from "../utils/API";
 import { Col, Row, Container } from "../components/Grid";
 import { List } from "../components/List";
 import "./Home-Style.css"
+import Saved from "./Saved";
 
 class Home extends Component {
   state = {
@@ -47,8 +48,16 @@ class Home extends Component {
   };
 
   handleBookSave = id => {
-    const book = this.state.books.find(book => book.id === id);
-
+    const book = this.state.books.find(book  => book.id === id);
+    console.log({
+      googleId: book.id,
+      title: book.volumeInfo.title,
+      subtitle: book.volumeInfo.subtitle,
+      link: book.volumeInfo.infoLink,
+      authors: book.volumeInfo.authors,
+      description: book.volumeInfo.description,
+      image: book.volumeInfo.imageLinks.thumbnail
+    })
     API.saveBook({
       googleId: book.id,
       title: book.volumeInfo.title,
@@ -67,9 +76,9 @@ class Home extends Component {
           <Col size="md-12">
             <Jumbotron>
               <h1 className="text-center">
-                <strong>HABIB's GOOGLE BOOK SEARCH</strong>
+                <strong>HABIB's BOOK SEARCH by GOOGLE</strong>
               </h1>
-              <h2 className="text-center">SEARCH FOR THE BOOK YOU LIKE</h2>
+              <h2 className="text-center">SEARCH FOR FAVORITE BOOKS</h2>
             </Jumbotron>
           </Col>
           <Col size="md-12">
